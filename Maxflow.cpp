@@ -1,7 +1,4 @@
-/*
-×î´óÁ÷SAPËã·¨
-POJ1273
-*/
+
 
 #include <vector>
 #include <cstring>
