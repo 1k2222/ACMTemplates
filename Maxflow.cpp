@@ -1,5 +1,5 @@
 /*
-�����SAP�㷨
+×î´óÁ÷SAPËã·¨
 POJ1273
 */
 
@@ -37,6 +37,7 @@ private:
 
 const valueType Maxflow::INF = 0x3fffffff;
 
+//N表示网络图中节点个数
 Maxflow::Maxflow(int N)
 	:T(N)
 {
@@ -65,6 +66,7 @@ Maxflow::~Maxflow()
 	delete[]h;
 }
 
+//增加一条边，r表示剩余容量，c表示最大容量
 void Maxflow::insertEdge(int from, int to, valueType r, valueType c)
 {
 	int cur = edges.size();
@@ -109,6 +111,7 @@ int Maxflow::dfs(int x, valueType y)
 	return 0;
 }
 
+//返回最大流
 int Maxflow::max_flow()
 {
 	for (int i = 0; i <= T; i++) h[i] = vh[i] = 0;
